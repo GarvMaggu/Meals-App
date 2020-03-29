@@ -105,7 +105,7 @@ class _MyAppState extends State<MyApp> {
         // } else if (settings.name == '/something-else') {
         //   return ...;
         // }
-        // return MaterialPageRoute(builder: (ctx) => CategoriesScreen(),);
+        return MaterialPageRoute(builder: (ctx) => CategoriesScreen(),);
       },
       onUnknownRoute: (settings) {
         return MaterialPageRoute(
