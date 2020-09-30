@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:like_button/like_button.dart';
 
 import '../screens/meal_detail_screen.dart';
 import '../models/meal.dart';
@@ -11,13 +12,14 @@ class MealItem extends StatelessWidget {
   final Complexity complexity;
   final Affordability affordability;
 
-  MealItem(
-      {@required this.id,
-      @required this.title,
-      @required this.imageUrl,
-      @required this.affordability,
-      @required this.complexity,
-      @required this.duration,});
+  MealItem({
+    @required this.id,
+    @required this.title,
+    @required this.imageUrl,
+    @required this.affordability,
+    @required this.complexity,
+    @required this.duration,
+  });
 
   String get complexityText {
     switch (complexity) {
@@ -114,7 +116,7 @@ class MealItem extends StatelessWidget {
               ],
             ),
             Padding(
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.all(10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
@@ -149,6 +151,15 @@ class MealItem extends StatelessWidget {
                         width: 6,
                       ),
                       Text(affordabilityText),
+                    ],
+                  ),
+                  Row(
+                    children: <Widget>[
+                      LikeButton(),
+                      SizedBox(
+                        width: 6,
+                      ),
+                      Text('Like'),
                     ],
                   ),
                 ],
